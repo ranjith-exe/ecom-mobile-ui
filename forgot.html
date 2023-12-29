@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Account - Forgot Password</title>
+  </head>
+
+  <body class="min-h-screen flex items-center justify-center bg-[#f6f6f6]">
+    <!-- Back Icon -->
+    <div class="absolute top-4 left-4">
+      <a href="#" class="text-gray-800">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-sm p-8 mx-2 rounded-xl">
+      <!-- Vector Image -->
+      <div class="mb-6">
+        <img
+          src="https://img.freepik.com/free-vector/account-concept-illustration_114360-5201.jpg?w=740&t=st=1703761292~exp=1703761892~hmac=6bcb4c6d9341c6c790ce5b0c69c234025eff27e8b099afe7e655f1e2103b9596"
+          alt="Vector Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Heading, Paragraph, Input, and Submit Button -->
+      <div class="pt-5">
+        <div class="flex items-center justify-center">
+          <img
+            src="https://publictemplates.wbsrvcx.com/t/reset-password/gif-resetpass.gif"
+            class="w-20 text-center animate-bounce"
+            alt=""
+          />
+        </div>
+        <h2 class="font-roboto text-3xl font-semibold py-3">Forgot Password</h2>
+        <p class="text-gray-500 mb-4">
+          Don't Worry! It happens. Please enter the address associated with the
+          account
+        </p>
+
+        <!-- Input Box -->
+        <!-- <input type="text" placeholder="Your Input" class="w-full px-4 py-2 mb-4 border rounded-xl focus:outline-none focus:border-blue-500"> -->
+        <div class="relative mt-6 bg-white">
+          <input
+            type="text"
+            id="emailid"
+            class="border border-grey-300 block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:border-gray-400 dark:focus:border-yellow-500 focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
+            placeholder=" "
+            id="typedInput"
+            value=""
+          />
+          <label
+            for="emailid"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-black peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+            >Email</label
+          >
+        </div>
+        <!-- Submit Button -->
+        <button
+          id="myBtn"
+          class="w-full mt-5 bg-yellow-400 text-white py-3 rounded-lg hover:bg-yellow-500 focus:outline-none"
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+
+    <script>
+      var btnEl = document.getElementById("myBtn");
+      var emailEl = document.getElementById("emailid");
+
+      btnEl.addEventListener("click", function () {
+        console.log(emailEl.value);        
+      });
+    </script>
+
+  </body>
+</html>

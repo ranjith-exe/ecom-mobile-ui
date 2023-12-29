@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Account - Verification</title>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-[#f6f6f6]">
+  <!-- Back Icon -->
+  <div class="absolute top-4 left-4">
+    <a href="#" class="text-gray-800">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-sm p-8 mx-2 rounded-xl">
+    <!-- Vector Image -->
+    <div class="mb-6">
+      <img
+        src="https://img.freepik.com/free-vector/enter-otp-concept-illustration_114360-7887.jpg?w=740&t=st=1703768533~exp=1703769133~hmac=dc8cbf2181794fc5dd7e99cf61207a313fd2675bed79dfb8b2d63985f3248e6a"
+        alt="Vector Image" class="w-full h-auto" />
+    </div>
+
+    <!-- Heading, Paragraph, Input, and Submit Button -->
+    <div class="pt-5">
+      <div class="flex items-center justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/159/159478.png" class="w-20 text-center animate-bounce"
+          alt="" />
+      </div>
+      <div class="text-center py-4">
+        <h2 class="font-roboto text-3xl font-semibold">
+          Verification Code
+        </h2>
+        <p class="text-gray-500 mt-8">
+          A code has been sent to your email, Please check email inbox and
+          enter here
+        </p>
+      </div>
+      <form action="#" method="post">
+      <div class="my-5">
+        <div class="flex justify-center items-center">
+          <div class="flex space-x-4">
+            <div
+              class="w-14 h-16 border-2 rounded border-yellow-300 focus:border-yellow-400 flex items-center justify-center">
+              <input maxlength="1" autofocus id="digit1"  type="text" inputmode="numeric" pattern="[0-9]{1}"
+                class="w-full h-full text-center  focus:outline-none text-3xl text-yellow-400" placeholder="" />
+            </div>
+            <div
+              class="w-14 h-16 border-2 rounded border-yellow-300 focus:border-yellow-400 flex items-center justify-center">
+              <input maxlength="1" id="digit2" type="text" inputmode="numeric" pattern="[0-9]{1}"
+                class="w-full h-full text-center text-3xl focus:outline-none text-yellow-400" placeholder="" />
+            </div>
+            <div
+              class="w-14 h-16 border-2 rounded border-yellow-300 focus:border-yellow-400 flex items-center justify-center">
+              <input maxlength="1" id="digit3" type="text" inputmode="numeric" pattern="[0-9]{1}"
+                class="w-full h-full text-center text-3xl focus:outline-none text-yellow-400" placeholder="" />
+            </div>
+            <div
+              class="w-14 h-16 border-2 rounded border-yellow-300 focus:border-yellow-400 flex items-center justify-center">
+              <input maxlength="1" id="digit4" type="text" inputmode="numeric" pattern="[0-9]{1}"
+                class="w-full h-full text-center text-3xl focus:outline-none text-yellow-400" placeholder="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button id="myBtn" type="submit"
+          class="w-full mt-5 bg-yellow-400 text-white py-3 rounded-lg hover:bg-yellow-500 focus:outline-none">
+          Submit
+        </button>
+      </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    // Function to move focus to the next or previous input
+    function focusNextInput(current, next) {
+      if (current.value.length === current.maxLength && !isNaN(current.value)) {
+        next.focus();
+      }
+    }
+
+    // Function to clear input if not a number
+    function clearNonNumberInput(input) {
+      if (isNaN(input.value)) {
+        input.value = '';
+      }
+    }
+
+    // Attach keyup event listeners to each input
+    document.getElementById('digit1').addEventListener('keyup', function () {
+      clearNonNumberInput(this);
+      focusNextInput(this, document.getElementById('digit2'));
+    });
+
+    document.getElementById('digit2').addEventListener('keyup', function () {
+      clearNonNumberInput(this);
+      focusNextInput(this, document.getElementById('digit3'));
+    });
+
+    document.getElementById('digit3').addEventListener('keyup', function () {
+      clearNonNumberInput(this);
+      focusNextInput(this, document.getElementById('digit4'));
+    });
+
+    document.getElementById('digit4').addEventListener('keyup', function () {
+      clearNonNumberInput(this);
+      // You can perform OTP validation here if needed
+    });
+  </script>
+ 
+</body>
+
+</html>
