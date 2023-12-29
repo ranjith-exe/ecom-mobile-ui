@@ -13,7 +13,7 @@
   <div class="max-w-sm p-5 mx-2 rounded-xl">
     <!-- Vector Image -->
     <div class="mb-6 grid justify-center">
-      <img src="https://img.freepik.com/free-vector/account-concept-illustration_114360-5201.jpg?w=740&t=st=1703761292~exp=1703761892~hmac=6bcb4c6d9341c6c790ce5b0c69c234025eff27e8b099afe7e655f1e2103b9596" alt="Vector Image" class="w-[150px] h-auto" />
+      <img src="assets/images/ui/signin.png" alt="Vector Image" class="w-[150px] h-auto" />
     </div>
 
     <!-- Heading, Paragraph, Input, and Submit Button -->
@@ -34,10 +34,16 @@
         <input type="password" id="password" class="border border-grey-300 block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 appearance-none dark:text-white dark:border-gray-400 dark:focus:border-yellow-500 focus:outline-none focus:ring-0 focus:border-yellow-500 peer" placeholder=" " />
         <label for="password" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-black peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Password</label>
       </div>
-
+      <div>
+        <p class="pt-3 ml-1"><a clas="text-yellow-400" href="forgot.html">Forgot Password ?</a></p>
+      </div>
       <!-- Sign In Button -->
       <button id="signInBtn" class="w-full mt-5 bg-yellow-400 text-white py-3 rounded-lg hover:bg-yellow-500 focus:outline-none">
         Sign In
+      </button>
+
+      <button id="signInBtn" class="w-full mt-5 bg-green-400 text-white py-3 rounded-lg hover:bg-green-500 focus:outline-none" onclick="window.location.href='signup.html'">
+        Create New Account
       </button>
     </div>
   </div>
